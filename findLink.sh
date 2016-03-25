@@ -9,9 +9,8 @@ if [ $# -eq 2 ] ; then
 else
     dir=`pwd`
 fi
-inode=`ls -i $1 | cut -d' ' -f1`
 count=0
-for link in `find $dir -inum $inode`
+for link in `find $dir -samefile $1`
 do
     echo $link
     count=`expr $count + 1`
