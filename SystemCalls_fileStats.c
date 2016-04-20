@@ -8,12 +8,12 @@
 int main(int argc, char *argv[])
 {
    struct stat sb;
-
+    /* Are src name arguments missing */
    if (argc != 2) {
        fprintf(stderr, "Usage: %s <pathname>\n", argv[0]);
        exit(EXIT_FAILURE);
    }
-
+    /* Getting stats of file */
    if (stat(argv[1], &sb) == -1) {
        perror("stat");
        exit(EXIT_FAILURE);
