@@ -28,7 +28,7 @@ int main(int argc, const char *argv[])  {
                 break;
             case 3:
                 cout<<"Sorted Employees";
-                execle("/bin/bash", "script_sortEmployees", (char *)0, (char *)0);
+                execle("/bin/bash", "script_sortEmployees.sh", (char *)0);
                 break;
             default:break;
         }
