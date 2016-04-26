@@ -10,11 +10,10 @@ int main()  {
     pid_t pid = fork();
     if(pid == 0)    {
         cout<<"Child process";
-        //system("ls -S|head -5");
-        //execl("ls","-S","|","head","-5";
-        execlp("ls","ls","-S",">","file1.txt",(char *)0);
-        cout<<"\n\nhello\n\n";
-        execlp("head","head","-5","file1.txt",(char *)0);
+        execlp("bash","bash","script_5largestFiles.sh",(char *)0);
+        execl("/bin/ps","ps","aux",(char *)0);
+        execle()
+
 
 
     }
