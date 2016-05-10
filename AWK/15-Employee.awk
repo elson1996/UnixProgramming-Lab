@@ -1,7 +1,6 @@
 BEGIN{
     printf("REPORT\n");
     numOfEmployees=0;
-    numOfDept = 0;
 }
 {
     depts[$4] = $4

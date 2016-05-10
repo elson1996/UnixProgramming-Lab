@@ -1,10 +1,8 @@
 BEGIN{
-    dig=1;
     sum=0;
 }
 {
-    sum = sum + $dig;
-    dig++;
+    sum = sum + $NR;
 }
 END{
     printf("Trace: %d",sum);
