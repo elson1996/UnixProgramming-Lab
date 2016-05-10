@@ -1,9 +1,10 @@
 BEGIN{
     printf("REPORT\n");
     numOfEmployees=0;
+	FS="|";
 }
 {
-    depts[$4] = $4
+    depts[$4] += $6
     empdept[numOfEmployees] = $4
     emps[numOfEmployees++] = $0;
 }
@@ -15,5 +16,6 @@ END{
                 printf("%s\n",emps[i]);
             }
         }
+	printf("Total Salary: %d\n\n",depts[dept]);
     }
 }
