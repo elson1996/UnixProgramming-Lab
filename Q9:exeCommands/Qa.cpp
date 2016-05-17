@@ -28,9 +28,10 @@ int main(int argc, const char *argv[])  {
                 break;
             case 3:
                 cout<<"Sorted Employees";
-                execle("/bin/bash", "script_sortEmployees.sh", (char *)0);
+                char *envargs[] = { NULL };
+                execle("/bin/bash","bash", "script_sortEmployees.sh", (char *)0, envargs);
                 break;
-            default:break;
+            //default:break;
         }
     }
     else{

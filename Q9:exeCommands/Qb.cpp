@@ -32,16 +32,10 @@ int main(int argc, const char *argv[])  {
                 execlp("echo","echo","$SHELL",(char *)0);
                 break;
             case 3:
-                cout<<"Executable Files: \n";
-                char* args2[5];
-                args2[0] = (char *) "find";
-                args2[1] = (char *) "-executable";
-                args2[2] = (char *) "-type";
-                args2[3] = (char *) "f";
-                args2[4] = (char *)0;
-                execv("/usr/bin/find", args2);
+                char *arg2[] = { "/bin/sh", "script_findExec.sh",(char *) 0 };
+                char *envargs[] ={0};
+                execve(arg2[0], &arg2[0], envargs);
                 break;
-            default:break;
         }
     }
     else{
