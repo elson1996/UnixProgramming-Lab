@@ -34,7 +34,7 @@ int main(int argc, const char *argv[])  {
             case 3:
                 char *arg2[] = { "/bin/sh", "script_findExec.sh",(char *) 0 };
                 char *envargs[] ={0};
-                execve(arg2[0], &arg2[0], envargs);
+                execve(arg2[0], arg2, envargs);
                 break;
         }
     }
