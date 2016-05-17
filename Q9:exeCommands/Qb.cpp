@@ -29,7 +29,7 @@ int main(int argc, const char *argv[])  {
                 break;
             case 2:
                 cout<<"Current Shell:\n";
-                execlp("echo","echo","$SHELL",(char *)0);
+                execlp("bash","bash","script_currentShell.sh",(char *)0);
                 break;
             case 3:
                 char *arg2[] = { "/bin/sh", "script_findExec.sh",(char *) 0 };
